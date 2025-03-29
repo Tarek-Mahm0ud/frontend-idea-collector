@@ -1,0 +1,144 @@
+:root {
+  --primary-blue: #2D3250;
+  --text-gray: #64748b;
+  --background: #f8fafc;
+  --gold: #C6A96D;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  min-height: 100vh;
+  background: white;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 32px;
+  background: #2D3250;
+  border-radius: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-title {
+  font-size: 28px;
+  color: #B7B7C9;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.dashboard-subtitle {
+  color: #9494A6;
+  font-size: 15px;
+}
+
+.dashboard-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 600px;
+  margin: 0 auto 32px;
+  padding: 0 16px;
+}
+
+.action-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.submit-idea-btn {
+  background: #C6A96D;
+  color: #1a1a1a;
+}
+
+.logout-button {
+  background: rgba(45, 50, 80, 0.1);
+  color: #2D3250;
+}
+
+/* IdeaForm styles */
+.idea-form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 32px;
+}
+
+.idea-form h2 {
+  color: #2D3250;
+  font-size: 24px;
+  margin-bottom: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.idea-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #f8fafc;
+  resize: vertical;
+}
+
+.tags-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #f8fafc;
+}
+
+.char-count {
+  text-align: right;
+  color: #64748b;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.submit-button {
+  background: #C6A96D;
+  color: #1a1a1a;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 24px;
+}
+
+@media (max-width: 640px) {
+  .dashboard-actions {
+    grid-template-columns: 1fr;
+  }
+  
+  .idea-form-container {
+    padding: 24px 16px;
+  }
+}

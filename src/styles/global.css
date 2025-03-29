@@ -1,0 +1,25 @@
+:root {
+  /* Luxury Color System */
+  --primary: #1C1C1C;
+  --secondary: #C6A96D;
+  --accent: #A88D5B;
+  --background: #F9F6F0;
+  --surface: #252525;
+  --text-light: #F9F6F0;
+  --text-dark: #1C1C1C;
+  --gold-gradient: linear-gradient(135deg, #C6A96D, #A88D5B);
+  --dark-gradient: linear-gradient(145deg, #252525, #1C1C1C);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--primary);
+  color: var(--text-light);
+  line-height: 1.6;
+} 

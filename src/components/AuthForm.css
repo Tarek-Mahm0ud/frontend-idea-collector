@@ -1,0 +1,220 @@
+/* Modern Luxury Color Variables */
+:root {
+  --primary: #2D3250;
+  --secondary: #424769;
+  --accent: #7077A1;
+  --background: #f8fafc;
+  --text-primary: #2D3250;
+  --text-secondary: #676F9D;
+  --error: #E45858;
+  --success: #4CAF50;
+  --input-bg: #F8FAFF;
+  --shadow: rgba(45, 50, 80, 0.08);
+  --dark-gradient: linear-gradient(145deg, #252525, #1C1C1C);
+  --surface: #252525;
+  --gold-gradient: linear-gradient(135deg, #C6A96D, #A88D5B);
+  --text-dark: #1C1C1C;
+  --primary-blue: #2D3250;
+  --text-gray: #64748b;
+  --gold: #C6A96D;
+}
+
+/* Base Styles */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: white;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 32px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography */
+.auth-form h2 {
+  color: var(--secondary);
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.instruction-text {
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  color: var(--text-light);
+  font-size: 14px;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.form-group input {
+  width: 100%;
+  height: 45px;
+  padding: 0 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(198, 169, 109, 0.3);
+  border-radius: 8px;
+  color: var(--text-light);
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 2px rgba(198, 169, 109, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #a0aec0;
+}
+
+.form-group input.error {
+  border-color: #dc3545;
+}
+
+/* Buttons */
+.auth-button {
+  width: 100%;
+  height: 45px;
+  background: var(--gold-gradient);
+  color: var(--text-dark);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.auth-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(198, 169, 109, 0.3);
+}
+
+.auth-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Checkbox Styling */
+.checkbox-group {
+  margin: 16px 0;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  height: auto;
+}
+
+/* Messages */
+.error-message {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.submit-error {
+  background-color: rgba(228, 88, 88, 0.1);
+  color: var(--error);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Switch Links */
+.auth-switch {
+  margin-top: 16px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+.auth-switch button {
+  background: none;
+  border: none;
+  color: #4a90e2;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 4px;
+}
+
+/* Loading Animation */
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .auth-form {
+    padding: 32px 24px;
+    margin: 16px;
+  }
+  
+  .auth-form h2 {
+    font-size: 24px;
+  }
+  
+  .form-group input {
+    height: 44px;
+  }
+  
+  .auth-button {
+    height: 44px;
+  }
+}
+
+/* Add this to ensure all elements respect border-box sizing */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
