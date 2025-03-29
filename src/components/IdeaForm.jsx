@@ -18,7 +18,7 @@ const IdeaForm = () => {
     try {
       // Changed from 'token' to 'accessToken'
       const token = localStorage.getItem('accessToken');
-      console.log('Using token:', token); // Debug log
+      
       
       if (!token) {
         setError('Please sign in first');
@@ -26,7 +26,7 @@ const IdeaForm = () => {
         return;
       }
 
-      const response = await fetch('http://localhost:5000/api/ideas', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/ideas`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -37,9 +37,9 @@ const IdeaForm = () => {
         })
       });
 
-      console.log('Response status:', response.status); // Debug log
+      
       const data = await response.json();
-      console.log('Response data:', data); // Debug log
+      
 
       if (response.ok) {
         setDescription('');
