@@ -18,7 +18,7 @@ const IdeaForm = () => {
     try {
       // Changed from 'token' to 'accessToken'
       const token = localStorage.getItem('accessToken');
-      console.log('Using token:', token); // Debug log
+      
       
       if (!token) {
         setError('Please sign in first');
@@ -37,9 +37,9 @@ const IdeaForm = () => {
         })
       });
 
-      console.log('Response status:', response.status); // Debug log
+      
       const data = await response.json();
-      console.log('Response data:', data); // Debug log
+      
 
       if (response.ok) {
         setDescription('');
