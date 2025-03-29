@@ -29,7 +29,6 @@ const AdminDashboard = () => {
       setLoading(true);
       setError(null);
       const token = localStorage.getItem('accessToken');
-      console.log('Token:', token);
       const response = await fetch(`${process.env.REACT_APP_API_URL}/api/admin/users`, {
         headers: {
           'Authorization': `Bearer ${token}` 
@@ -37,7 +36,6 @@ const AdminDashboard = () => {
       });
 
       const data = await response.json();
-      console.log('Users data:', data); // Debug log
       
       if (response.ok) {
         setUsers(data.users);
@@ -65,7 +63,6 @@ const AdminDashboard = () => {
       });
 
       const data = await response.json();
-      console.log('Ideas data:', data); // Debug log
       
       if (response.ok) {
         setIdeas(data.ideas);
